@@ -13,5 +13,7 @@ public class Program
         // Console.WriteLine("Game over.");
      Player Steave=new Player("Steave");
         Console.WriteLine(Steave.GetName());
+        Steave.BlockCoolDown=10;
+        Console.WriteLine(Steave.BlockCoolDown);
     }
 }
