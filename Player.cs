@@ -1,6 +1,6 @@
 public class Player
 {
-    private int health;
+    private int health = 100;
     private string name;
     private int heals;
     private int maxHeals=3;
@@ -12,17 +12,21 @@ public class Player
     {
         return name;
     }
-    public void SetHealth(int number)
-    {
-        if(number <= 0)
+    public int Health
         {
-            Console.WriteLine("You must enter a positive number.");
+            get { return name; }
+            set
+            {
+                if (value <= 0)
+                {
+                    Console.WriteLine("you are out of health");
+                }
+                else
+                {
+                    name = value;
+                }
+            }
         }
-        else
-        {
-            health = number;
-        }
-    }
     public int GetHealth()
     {
         return health;
