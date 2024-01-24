@@ -6,10 +6,12 @@ public class Program
         Console.WriteLine("Welcome.");
         Console.WriteLine("Press enter to start.");
         Console.ReadLine();
-        while(true)
-        {
-            Console.WriteLine("Press control+c to stop this loop.");
-        }
-        Console.WriteLine("Game over.");
+        // while(true)
+        // {
+        //     Console.WriteLine("Press control+c to stop this loop.");
+        // }
+        // Console.WriteLine("Game over.");
+     Player Steave=new Player("Steave");
+        Console.WriteLine(Steave.GetName());
     }
 }
