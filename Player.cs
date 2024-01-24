@@ -14,7 +14,7 @@ public class Player
     }
     public int Health
         {
-            get { return name; }
+            get { return health; }
             set
             {
                 if (value <= 0)
@@ -27,8 +27,4 @@ public class Player
                 }
             }
         }
-    public int GetHealth()
-    {
-        return health;
-    }
 }
