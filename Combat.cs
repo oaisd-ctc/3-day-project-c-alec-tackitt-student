@@ -1,19 +1,21 @@
 
 public static class Combat
 {
-    random Random=new Random();
-    public int TakeDamage()
+     Random rnd = new Random();
+    int num = rnd.Next();
+
+    public static int TakeDamage()
     {
-     return Random.next(1,16);
+     return rnd.Next(1,16);
     }
-    public int Heal()
+    public static int Heal()
     {
-        return Random.Next(5,10);
+        return Rnd.Next(5,10);
     }
-    public bool block()
+    public static bool block()
     {
         bool block=true;
         return block;
     }
-    public int heal
+   
 }

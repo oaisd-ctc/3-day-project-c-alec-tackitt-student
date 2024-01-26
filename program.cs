@@ -20,8 +20,8 @@ public class Program
 
         while(true)
         {
-            Player1Selection(player1Name);
-            Player2Selection(player2Name);
+            Player1Selection(player1Name, player1, player2);
+            Player2Selection(player2Name, player1, player2);
             player1.Health = 0;
             if(player1.Health <= 0){
                 break;
@@ -29,7 +29,7 @@ public class Program
         }
         Console.WriteLine("Game over.");
     }
-     public static void Player1Selection(string player1Name){
+     public static void Player1Selection(string player1Name, Player player1, Player player2){
             Console.WriteLine($"{player1Name}, select what you want to do:");
             System.Console.WriteLine("1. Attack");
             System.Console.WriteLine("2. Block");
@@ -38,7 +38,7 @@ public class Program
             
             switch (player1Choice){
                 case 1:
-                    //attack method
+                    player2.Health = player2.Health - Combat.TakeDamage();
                     System.Console.WriteLine("");
                     break;
                 case 2:
@@ -51,7 +51,7 @@ public class Program
                     break;
             }
         }
-        public static void Player2Selection(string player2Name){
+        public static void Player2Selection(string player2Name, Player player1, Player player2){
             Console.WriteLine($"{player2Name}, select what you want to do:");
             System.Console.WriteLine("1. Attack");
             System.Console.WriteLine("2. Block");
@@ -60,7 +60,7 @@ public class Program
             
             switch (player2Choice){
                 case 1:
-                    //attack method
+                    player1.Health = player1.Health - Combat.TakeDamage();
                     System.Console.WriteLine("");
                     break;
                 case 2:
