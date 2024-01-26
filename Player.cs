@@ -5,7 +5,7 @@ public class Player
     private int heals;
     private int maxHeals=3;
     private int blockCoolDown=0;
-    public Player(string name)
+    public Player(string? name)
     {
         this.name=name;
     }
