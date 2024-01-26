@@ -18,7 +18,7 @@ public class Player
             health = value;
             if (value <= 0)
             {
-                Console.WriteLine("you are out of health");
+                Console.WriteLine($"{this.name} is out of health");
             }
         }
     }
