@@ -23,7 +23,7 @@ public class Program
             Player1Selection(player1Name);
             Player2Selection(player2Name);
             player1.Health = 0;
-            if (player1.Health <= 0){
+            if(player1.Health <= 0){
                 break;
             }
         }

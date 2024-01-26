@@ -18,13 +18,10 @@ public class Player
         get { return health; }
         set
         {
+            health = value;
             if (value <= 0)
             {
                 Console.WriteLine("you are out of health");
-            }
-            else
-            {
-                health = value;
             }
         }
     }
