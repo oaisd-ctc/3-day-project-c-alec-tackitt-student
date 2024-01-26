@@ -9,10 +9,7 @@ public class Player
     {
         this.name=name;
     }
-    public string GetName()
-    {
-        return name;
-    }
+    
     public int Health
     {
         get { return health; }
@@ -23,6 +20,14 @@ public class Player
             {
                 Console.WriteLine("you are out of health");
             }
+        }
+    }
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            value = name;
         }
     }
     public int BlockCoolDown

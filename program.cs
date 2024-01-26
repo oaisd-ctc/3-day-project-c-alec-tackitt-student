@@ -22,7 +22,6 @@ public class Program
         {
             Player1Selection(player1Name, player1, player2);
             Player2Selection(player2Name, player1, player2);
-            player1.Health = 0;
             if(player1.Health <= 0){
                 break;
             }
@@ -40,6 +39,7 @@ public class Program
                 case 1:
                     player2.Health = player2.Health - Combat.TakeDamage();
                     System.Console.WriteLine("");
+                    System.Console.WriteLine($"{player2.Name}'s health is now {player2.Health}");
                     break;
                 case 2:
                     //block method
@@ -62,6 +62,7 @@ public class Program
                 case 1:
                     player1.Health = player1.Health - Combat.TakeDamage();
                     System.Console.WriteLine("");
+                    System.Console.WriteLine($"{player1.Name}'s health is now {player1.Health}");
                     break;
                 case 2:
                     //block method
