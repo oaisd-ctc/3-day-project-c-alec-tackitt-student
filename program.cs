@@ -3,17 +3,75 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Welcome.");
+        Console.WriteLine("Welcome to Fighting Friends! a fun and interative game to play with your friend!");
+        System.Console.WriteLine("the game is about turn based combat, pokemon style with the options to attack, heal, and block.");
+        System.Console.WriteLine("try and outlive your friend in the shortest amount of moves!");
         Console.WriteLine("Press enter to start.");
-        Console.ReadLine();
-        // while(true)
-        // {
-        //     Console.WriteLine("Press control+c to stop this loop.");
-        // }
-        // Console.WriteLine("Game over.");
-     Player Steave=new Player("Steave");
-        Console.WriteLine(Steave.GetName());
-        Steave.BlockCoolDown=10;
-        Console.WriteLine(Steave.BlockCoolDown);
+        System.Console.WriteLine("");
+        System.Console.WriteLine("enter Player 1's name:");
+        string? player1Name = Console.ReadLine();
+        System.Console.WriteLine("enter Player 2's name:");
+        string? player2Name = Console.ReadLine();
+        Player player1 = new Player(player1Name);
+        Player player2 = new Player(player2Name);
+
+        System.Console.WriteLine($"cool names {player1Name} and {player2Name}, good luck and have fun!");
+        System.Console.WriteLine("");
+
+        while(true)
+        {
+            Player1Selection(player1Name);
+            Player2Selection(player2Name);
+            player1.Health = 0;
+            if(player1.Health <= 0){
+                break;
+            }
+        }
+        Console.WriteLine("Game over.");
     }
+     public static void Player1Selection(string player1Name){
+            Console.WriteLine($"{player1Name}, select what you want to do:");
+            System.Console.WriteLine("1. Attack");
+            System.Console.WriteLine("2. Block");
+            System.Console.WriteLine("3. Heal");
+            int player1Choice = int.Parse(Console.ReadLine()!);
+            
+            switch (player1Choice){
+                case 1:
+                    //attack method
+                    System.Console.WriteLine("");
+                    break;
+                case 2:
+                    //block method
+                    System.Console.WriteLine("");
+                    break;
+                case 3:
+                    //heal method
+                    System.Console.WriteLine("");
+                    break;
+            }
+        }
+        public static void Player2Selection(string player2Name){
+            Console.WriteLine($"{player2Name}, select what you want to do:");
+            System.Console.WriteLine("1. Attack");
+            System.Console.WriteLine("2. Block");
+            System.Console.WriteLine("3. Heal");
+            int player2Choice = int.Parse(Console.ReadLine()!);
+            
+            switch (player2Choice){
+                case 1:
+                    //attack method
+                    System.Console.WriteLine("");
+                    break;
+                case 2:
+                    //block method
+                    System.Console.WriteLine("");
+                    break;
+                case 3:
+                    //heal method
+                    System.Console.WriteLine("");
+                    break;
+            }
+        }
+        
 }

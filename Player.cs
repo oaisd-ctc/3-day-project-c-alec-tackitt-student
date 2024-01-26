@@ -5,7 +5,7 @@ public class Player
     private int heals;
     private int maxHeals=3;
     private int blockCoolDown=0;
-    public Player(string name)
+    public Player(string? name)
     {
         this.name=name;
     }
@@ -18,13 +18,10 @@ public class Player
         get { return health; }
         set
         {
+            health = value;
             if (value <= 0)
             {
                 Console.WriteLine("you are out of health");
-            }
-            else
-            {
-                health = value;
             }
         }
     }
